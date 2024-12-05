@@ -1,12 +1,13 @@
 import React from "react";
 import SongsHomepage from "./SongsHomepage";
 import SideBar from "./SideBar";
-function Bottom() {
+function Bottom(props) {
+    
   return (
     <div className="bottom">
       <SideBar />
       <div className="middle">
-        <SongsHomepage />
+        <SongsHomepage {...props}/>
       </div>
     </div>
   );

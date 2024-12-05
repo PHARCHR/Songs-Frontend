@@ -1,15 +1,17 @@
 import React from "react";
 import "../CSS/Homepage.css";
-import axios from "axios";
-
 import Top from "./Top";
 import Bottom from "./Bottom";
+import { useState } from "react";
 function HomePage() {
+  const [searchValue, setSearchValue] = useState("");
+  const searchAlbums = (value) => {
+    setSearchValue(value);
+  };
   return (
     <div className="Homepage">
-      <Top></Top>
-      <Bottom></Bottom>
-    
+      <Top searchAlbums={searchAlbums} />
+      <Bottom searchValue={searchValue} />
     </div>
   );
 }

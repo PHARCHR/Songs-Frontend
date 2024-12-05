@@ -22,6 +22,10 @@ body {
   top: 0rem;
   z-index: 3;
 }
+.top button{
+ background-color: black;
+ border:none;
+}
 .search {
   position: relative;
   width: 70%;
@@ -69,6 +73,15 @@ body {
   outline: none;
   border: none;
 }
+.search button:focus {
+  outline: none;
+}
+
+.search button:focus .fa-magnifying-glass {
+  font-size: 1.3rem;
+  color: rgb(197, 187, 187);
+}
+
 .bottom {
   display: flex;
   margin-top: 1.5rem;
