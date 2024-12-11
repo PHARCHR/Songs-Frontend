@@ -48,8 +48,17 @@ function Top(props) {
 
   return (
     <div className="top">
+        <div className="logout">
+          <i
+            className="fa-solid fa-arrow-left"
+            id="logout"
+            onClick={handleLogout}
+          ></i>
+          <label htmlFor="logout">Logout</label>
+        </div>
       <div className="search">
-        <i class="fa-solid fa-arrow-left" onClick={handleLogout}></i>
+      
+
         <input
           placeholder="Search"
           value={searched}
@@ -74,7 +83,8 @@ function Top(props) {
       {profileInfo && (
         <div ref={profileInfoRef} className="profile-info">
           <div className="profileInfo"></div>
-          <i class="fa-solid fa-user-large"></i>
+          <i className="fa-solid fa-user-large"></i>
+
           <p>
             <strong>Name:</strong> {profileInfo.name}
           </p>

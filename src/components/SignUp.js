@@ -1,5 +1,5 @@
-import React, {useState, useEffect } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../CSS/SignUp.css";
 import axios from "axios";
 
@@ -18,7 +18,6 @@ function SignUp() {
     document.body.style.width = "100vw";
     document.body.style.height = "100vh";
 
-    // Cleanup when component is unmounted or route changes
     return () => {
       document.body.style.backgroundColor = "initial";
       document.body.style.margin = "0";
@@ -75,7 +74,9 @@ function SignUp() {
         />
         <button>SignUp</button>
       </form>
-      <Link to="/Login"><h4>Login</h4></Link>
+      <Link to="/Login">
+        <h4>Login</h4>
+      </Link>
     </div>
   );
 }
