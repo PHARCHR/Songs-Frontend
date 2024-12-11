@@ -51,7 +51,7 @@ function SongsHomepage(props) {
         console.log("Token:", token);
 
         const response = await axios.get(
-          "https://api.spotify.com/v1/search?q="+query+"&type=album",
+          "https://api.spotify.com/v1/search?q=" + query + "&type=album",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -80,7 +80,7 @@ function SongsHomepage(props) {
     };
 
     getAlbum();
-  }, [searchValue,token]); // Run whenever the token changes
+  }, [searchValue, token]); // Run whenever the token changes
 
   return (
     <div>
